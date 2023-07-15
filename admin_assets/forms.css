@@ -1,0 +1,259 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.form__container {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -100%;
+    opacity: 0;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    border-radius: 9px;
+    height: fit-content;
+    box-shadow: -1px 1px 8px 1px grey;
+    z-index: 99999;
+}
+
+.form__container button {
+    border-radius: 5px;
+}
+
+
+.form__container.active {
+    right: 20%;
+    opacity: 1;
+    transform: scale(1);
+}
+
+h1.form-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.close__form {
+    cursor: pointer;
+}
+
+.content {
+    background-color: white;
+    width: 500px;
+    min-height: 304px;
+    border-radius: 6px;
+    padding: 10px 0;
+}
+
+img {
+    width: 100%;
+    height: 25%;
+}
+
+.form-title {
+    padding: 10px 40px 0px;
+}
+
+form {
+    padding: 0px 40px;
+}
+
+input[type=text],
+[type=email],
+[type=password] {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 100%;
+    margin: 4px 0;
+    padding: 10px 5px;
+    display: block;
+}
+
+input[type=number] {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    margin: 4px 0;
+    padding: 5px 5px;
+}
+
+input :hover {
+    background-color: red;
+}
+
+select {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    margin: 4px 0;
+    padding: 5px 0;
+    width: 50%;
+    cursor: pointer;
+}
+
+.beside {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    color: #ffffff;
+    background-color: #4caf50;
+    height: 40px;
+    width: 219px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2%;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+.form__container.addsubject .content {
+    min-height: 150px;
+    width: 377px;
+}
+
+.form__container.addsubject .content h1 {
+    margin-bottom: 9px;
+}
+
+.form__container.addsubject .content form {
+    padding: 0 10px;
+}
+
+.form-title {
+    padding: 18px;
+}
+
+.form__container.addsubject .content select {
+    width: 90%;
+}
+
+.account__container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.account__container {
+    width: 250px;
+    font-size: 14px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: -8px 4px 11px -6px grey;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.div__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 400px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+}
+
+.btns {}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+    margin-bottom: -27%;
+}
+
+.account__container:hover .btns {
+    margin: 0;
+}
+
+.btns button {
+    transform: translateX(-200%);
+    transition: 0.6s ease-in-out;
+    transition-delay: calc(.2s * var(--i));
+}
+
+.btns button:nth-child(2) {
+    transform: translateX(200%);
+}
+
+.account__container:hover .btns button {
+    transform: translateX(0%);
+
+}
+
+.btns button {
+    width: 119px;
+    margin: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.deleteThisSubjects {
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.subjects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px 1px;
+    width: 100%;
+}
+
+.btn {
+    display: inline-flex;
+}
+
+@media (max-width:650px) {
+    .form__container.active {
+        right: 0;
+        opacity: 1;
+        transform: scale(1);
+        width: 100%;
+    }
+
+    .form__container.active form {
+        padding: 5px;
+    }
+}
+
+.print {
+    width: 170px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    background: #faebd7;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 0px #cccccc;
+}
